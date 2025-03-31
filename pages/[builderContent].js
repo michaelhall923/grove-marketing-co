@@ -1,6 +1,6 @@
 // pages/[builderContent].js
-import { Builder } from '@builder.io/react';
-import { useRouter } from 'next/router';
+import { Builder, BuilderComponent } from '@builder.io/react';
+// import { useRouter } from 'next/router';
 
 const Page = ({ builderContent }) => {
   return (
