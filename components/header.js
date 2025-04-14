@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const Header = ({ data }) => {
   const pathName = usePathname();
+  console.log("Pathname: " + pathName);
 
   return (
     <header className="px-8 py-8 bg-transparent sticky top-0 z-10">
