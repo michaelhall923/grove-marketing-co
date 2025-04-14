@@ -11,7 +11,8 @@ const Header = ({ data }) => {
   useEffect(() => {
     setPathName(rawPath);
   }, [rawPath])
-  
+
+  if (!pathName) return null;
 
   console.log("Current pathname: '" + pathName + "'");
   console.log(data?.navigationLinks?.data?.links);
@@ -20,7 +21,7 @@ const Header = ({ data }) => {
     <header className="px-8 py-8 bg-transparent sticky top-0 z-10">
         <nav className="flex gap-2 justify-end uppercase text-2xl">
           {data?.navigationLinks?.data?.links.map((link, index) => (
-            <a key={link.url} href={link.url} className={`p-2 pb-1 border-2 ${link.url == pathName ? "" : "border-transparent"} rounded-sm inline-block leading-[1]`}>
+            <a key={index} href={link.url} className={`p-2 pb-1 border-2 ${link.url == pathName ? "" : "border-transparent"} rounded-sm inline-block leading-[1]`}>
               {link.text}
             </a>
           ))}
