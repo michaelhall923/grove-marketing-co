@@ -30,7 +30,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       page: page || null,
-      headerData: { navigationLinks } || {},
+      headerData: {
+        navigationLinks: navigationLinks || [],
+      },
     },
     // Revalidate the content every 5 seconds
     revalidate: 5,
