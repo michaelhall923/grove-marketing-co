@@ -57,7 +57,7 @@ export async function getStaticPaths() {
 
 // Define the Page component
 export default function Page({ page }: { page: BuilderContent | null }) {
-  const router = useRouter();
+  // const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
   // If the page content is not available

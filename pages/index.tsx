@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
