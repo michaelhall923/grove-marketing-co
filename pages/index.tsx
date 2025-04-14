@@ -49,7 +49,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export default function Home() {
   return (
     <div className="">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="lg:w-4xl mx-auto px-8">
+        <h1 className="uppercase w-xs text-right mb-8">
+          <div className="text-9xl leading-24 inline-block">Grove</div>
+          <div className="text-4xl">Marketing Co.</div>
+        </h1>
+        <h2 className="md:w-lg text-5xl font-copy">
+          Building adventurous brands on the Atlantic coast
+        </h2>
         {/* <Image
           className="dark:invert"
           src="/next.svg"
