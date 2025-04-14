@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const Header = ({ data }) => {
   const rawPath = usePathname();
-  const [pathName, setPathName] = useState(rawPath);
+  const [pathName, setPathName] = useState(null);
 
   useEffect(() => {
     setPathName(rawPath);
