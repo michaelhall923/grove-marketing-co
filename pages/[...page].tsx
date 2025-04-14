@@ -1,6 +1,5 @@
 // pages/[...page].tsx
 import React from "react";
-import { useRouter } from "next/router";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 import { BuilderContent } from "@builder.io/sdk";
 import DefaultErrorPage from "next/error";
@@ -57,7 +56,6 @@ export async function getStaticPaths() {
 
 // Define the Page component
 export default function Page({ page }: { page: BuilderContent | null }) {
-  // const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
   // If the page content is not available
