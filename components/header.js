@@ -12,7 +12,7 @@ const Header = ({ data }) => {
     setPathName(rawPath);
   }, [rawPath])
 
-  if (!pathName) return null;
+  if (!pathName || !data?.navigationLinks?.data?.links) return null;
 
   console.log("Current pathname: '" + pathName + "'");
   console.log(data?.navigationLinks?.data?.links);
