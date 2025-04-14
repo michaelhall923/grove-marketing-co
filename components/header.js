@@ -1,13 +1,18 @@
 // components/Header.js
 // import styles from './Header.module.css';
 
-// import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Header = ({ data }) => {
-  // const pathName = usePathname();
-  const router = useRouter();
-  const pathName = router?.asPath;
+  const rawPath = usePathname();
+  const [pathName, setPathName] = useState(rawPath);
+
+  useEffect(() => {
+    setPathName(rawPath);
+  }, [rawPath])
+  
+
   console.log("Current pathname: '" + pathName + "'");
   console.log(data?.navigationLinks?.data?.links);
 
