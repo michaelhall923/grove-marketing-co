@@ -1,4 +1,6 @@
 import Image from "next/image";
+import {  builder } from "@builder.io/react";
+import { GetStaticProps } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 
 // const geistSans = Geist({
@@ -11,11 +13,42 @@ import Image from "next/image";
 //   subsets: ["latin"],
 // });
 
+// Replace with your Public API Key
+builder.init('04a66a34a825475f879a3a1be1673b31');
+
+// Define a function that fetches the Builder
+// content for a given page
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // Fetch the builder content for the given page
+  const page = await builder
+    .get("page", {
+      userAttributes: {
+        urlPath: "/" + ((params?.page as string[])?.join("/") || ""),
+      },
+    })
+    .toPromise();
+
+  const navigationLinks = await builder.get('navigation-links', {
+    // You can use options for queries, sorting, and targeting here
+    // https://github.com/BuilderIO/builder/blob/main/packages/core/docs/interfaces/GetContentOptions.md
+  }).promise();
+
+  // Return the page content as props
+  return {
+    props: {
+      page: page || null,
+      headerData: { navigationLinks } || {},
+    },
+    // Revalidate the content every 5 seconds
+    revalidate: 5,
+  };
+};
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
+        {/* <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
@@ -59,10 +92,10 @@ export default function Home() {
           >
             Read our docs
           </a>
-        </div>
+        </div> */}
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
+        {/* <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
           target="_blank"
@@ -106,7 +139,7 @@ export default function Home() {
             height={16}
           />
           Go to nextjs.org →
-        </a>
+        </a> */}
       </footer>
     </div>
   );
