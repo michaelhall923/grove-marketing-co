@@ -12,10 +12,7 @@ const Header = ({ data }) => {
     setPathName(rawPath);
   }, [rawPath])
 
-  if (!pathName || !data?.navigationLinks?.data?.links) return null;
-
-  console.log("Current pathname: '" + pathName + "'");
-  console.log(data?.navigationLinks?.data?.links);
+  if (!pathName) return null;
 
   return (
     <header className="px-8 py-8 bg-transparent sticky top-0 z-10">
