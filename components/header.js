@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 
 const Header = ({ data }) => {
   const pathName = usePathname();
-  console.log("Current pathname:", pathName);
+  console.log("Current pathname: '" + pathName + "'");
+  console.log(data?.navigationLinks?.data?.links);
 
   return (
     <header className="px-8 py-8 bg-transparent sticky top-0 z-10">
