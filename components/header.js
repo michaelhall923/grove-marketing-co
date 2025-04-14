@@ -11,7 +11,7 @@ const Header = ({ data }) => {
         <nav className="flex gap-2 justify-end uppercase text-2xl">
           {data?.navigationLinks?.data?.links.map((link, index) => (
             <a key={index} href={link.url} className={`p-2 pb-1 border-2 ${link.url == pathName ? "" : "border-transparent"} rounded-sm inline-block leading-[1]`}>
-              {link.text} {`{${pathName}}`}
+              {link.text}
             </a>
           ))}
         </nav>
