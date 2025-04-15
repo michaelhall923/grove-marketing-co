@@ -1,4 +1,8 @@
 // import Image from "next/image";
+import SpriteSun from "@/components/SpriteSun";
+import SpriteRocket from "@/components/SpriteRocket";
+import SpriteLighthouse from "@/components/SpriteLighthouse";
+import SpriteWave from "@/components/SpriteWave";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
@@ -57,6 +61,23 @@ export default function Home() {
         <h2 className="md:w-lg text-5xl font-copy">
           Building adventurous brands on the Atlantic coast
         </h2>
+        <div className="relative min-h-96">
+          <div className="w-64 absolute top-4 -left-88">
+            <SpriteLighthouse />
+          </div>
+          <div className="w-screen absolute top-64 center left-1/2 -translate-x-1/2">
+            <SpriteWave />
+          </div>
+          <div className="w-48 absolute right-28">
+            <SpriteSun />
+          </div>
+          <div className="w-32 absolute right-0 -top-32">
+            <SpriteRocket />
+          </div>
+          <h2 className="w-md absolute top-112 left-1/2 -translate-x-1/2 text-center uppercase text-8xl">
+            Start Exploring
+          </h2>
+        </div>
         {/* <Image
           className="dark:invert"
           src="/next.svg"

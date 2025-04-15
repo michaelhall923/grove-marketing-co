@@ -29,6 +29,55 @@
   --font-mono: var(--font-geist-mono);
   --font-header: "Franklin Gothic Condensed", sans-serif;
   --font-copy: "Georgia", serif;
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes wave {
+    0% { 
+      transform: translateY(0);
+    }
+    50% { 
+      transform: translateY(-4%);
+    }
+    100% { 
+      transform: translateY(0);
+    }
+  }
+
+  --animate-sun: fade-in 0.8s ease-out forwards;
+  --animate-slide-in-bottom: slide-in-bottom 0.8s ease-out forwards;
+  --animate-slide-in-left: slide-in-left 1.6s ease-out forwards;
+  --animate-rocket: slide-in-bottom 2.4s ease-out forwards;
+  --animate-wave: wave 3s ease-in-out infinite;
 }
 
 @media (prefers-color-scheme: dark) {
