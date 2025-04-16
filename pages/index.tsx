@@ -3,6 +3,12 @@ import SpriteSun from "@/components/SpriteSun";
 import SpriteRocket from "@/components/SpriteRocket";
 import SpriteLighthouse from "@/components/SpriteLighthouse";
 import SpriteWave from "@/components/SpriteWave";
+import SpriteOceanTop from "@/components/SpriteOceanTop";
+import SpriteOceanLeft from "@/components/SpriteOceanLeft";
+import SpriteOceanRight from "@/components/SpriteOceanRight";
+import SpriteBoat from "@/components/SpriteBoat";
+import SpriteSurfer from "@/components/SpriteSurfer";
+import SpriteSmoke from "@/components/SpriteSmoke";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
@@ -59,24 +65,52 @@ export default function Home() {
           <div className="text-4xl">Marketing Co.</div>
         </h1>
         <h2 className="md:w-lg text-5xl font-copy">
-          Building adventurous brands on the Atlantic coast
+          Building adventurous brands from the Space Coast
         </h2>
         <div className="relative min-h-96">
           <div className="w-64 absolute top-4 -left-88">
             <SpriteLighthouse />
           </div>
-          <div className="w-screen absolute top-64 center left-1/2 -translate-x-1/2">
-            <SpriteWave />
-          </div>
           <div className="w-48 absolute right-28">
             <SpriteSun />
+          </div>
+          <div className="w-64 absolute -right-18 top-24">
+            <SpriteSmoke />
           </div>
           <div className="w-32 absolute right-0 -top-32">
             <SpriteRocket />
           </div>
-          <h2 className="w-md absolute top-112 left-1/2 -translate-x-1/2 text-center uppercase text-8xl">
-            Start Exploring
-          </h2>
+          <div className="w-screen absolute top-64 left-1/2 -translate-x-1/2 ">
+            <SpriteWave />
+          </div>
+          <div className="w-screen absolute top-80 left-1/2 -translate-x-1/2 ">
+            <div className="h-208" style={{ backgroundColor: "#194b51"}}></div>
+          </div>
+          <div className="w-screen absolute top-80 left-1/2 -translate-x-1/2 ">
+            <SpriteOceanTop />
+          </div>
+          <div className="w-172 absolute top-136 right-full translate-x-90">
+            <SpriteOceanLeft />
+          </div>
+          <div className="w-156 absolute top-156 left-full -translate-x-70">
+            <SpriteOceanRight />
+          </div>
+          <div className="w-64 absolute top-32 right-64 ">
+            <SpriteBoat />
+          </div>
+          <div className="w-64 absolute top-40 left-0 ">
+            <SpriteSurfer />
+          </div>
+          <div className="absolute top-144 w-full">
+            <h2 className="w-full lg:px-32 leading-22 inline-block text-center uppercase text-8xl">
+              Start Exploring
+            </h2>
+            <div className="relative w-32 h-32 mt-6 mx-auto rounded-full bg-grove-100">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#287073" className="absolute size-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+              </svg>
+            </div>
+          </div>
         </div>
         {/* <Image
           className="dark:invert"
