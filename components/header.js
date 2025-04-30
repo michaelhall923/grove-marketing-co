@@ -21,13 +21,13 @@ const Header = ({ data }) => {
       <Link href="/">
         <Image src="/img/logo-tan.png" alt="Home" width={50} height={50} />
       </Link>
-      {/* <nav className="flex gap-2 justify-end uppercase text-2xl">
+      <nav className="flex gap-2 justify-end uppercase text-2xl hidden">
         {data?.navigationLinks?.data?.links.map((link, index) => (
           <a key={index} href={link.url} className={`p-2 pb-1 border-2 ${link.url == pathName ? "" : "border-transparent"} rounded-sm inline-block leading-[1]`}>
             {link.text}
           </a>
         ))}
-      </nav> */}
+      </nav>
     </header>
   );
 };
