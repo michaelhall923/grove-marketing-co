@@ -105,6 +105,46 @@
     }
   }
 
+  @keyframes dolphin {
+    0% {
+      offset-distance: 0%;
+      rotate: -30deg;
+      opacity: 0;
+      /* background: green; */
+    }
+    100% {
+      offset-distance: 100%;
+      rotate: 0deg;
+      opacity: 1;
+      /* background: red; */
+    }
+  }
+  @keyframes jellyfish {
+    0% {
+      transform: translate(50px, 300px);
+      rotate: -10deg;
+      opacity: 0;
+      /* background: green; */
+    }
+    100% {
+      transform: translate(0, 0);
+      rotate: 0deg;
+      opacity: 1;
+      /* background: red; */
+    }
+  }
+
+  @keyframes fish {
+    0% {
+      transform: translateX(-200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   --animate-sun: fade-in 0.8s ease-out forwards;
   --animate-slide-in-bottom: slide-in-bottom 0.8s ease-out forwards;
   --animate-slide-in-left: slide-in-left 1.6s ease-out forwards;
@@ -123,6 +163,9 @@
   --animate-smoke-6: fade-in 0.8s ease-out forwards 1.2s;
   --animate-smoke-7: fade-in 0.8s ease-out forwards 1.6s;
   --animate-smoke-8: fade-in 0.8s ease-out forwards 2.0s;
+  --animate-dolphin: dolphin 2s ease-in-out forwards;
+  --animate-jellyfish: jellyfish 3s ease-in-out forwards;
+  --animate-fish: fish 1.6s ease-out forwards;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,6 +1,8 @@
 // components/Header.js
 // import styles from './Header.module.css';
 
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -15,15 +17,18 @@ const Header = ({ data }) => {
   if (!pathName) return null;
 
   return (
-    <header className="px-8 py-8 bg-transparent sticky top-0 z-10">
-        <nav className="flex gap-2 justify-end uppercase text-2xl">
-          {data?.navigationLinks?.data?.links.map((link, index) => (
-            <a key={index} href={link.url} className={`p-2 pb-1 border-2 ${link.url == pathName ? "" : "border-transparent"} rounded-sm inline-block leading-[1]`}>
-              {link.text}
-            </a>
-          ))}
-        </nav>
-      </header>
+    <header className="px-8 py-8 bg-transparent sticky top-0 z-10 flex justify-end items-center">
+      <Link href="/">
+        <Image src="/img/logo-tan.png" alt="Home" width={50} height={50} />
+      </Link>
+      {/* <nav className="flex gap-2 justify-end uppercase text-2xl">
+        {data?.navigationLinks?.data?.links.map((link, index) => (
+          <a key={index} href={link.url} className={`p-2 pb-1 border-2 ${link.url == pathName ? "" : "border-transparent"} rounded-sm inline-block leading-[1]`}>
+            {link.text}
+          </a>
+        ))}
+      </nav> */}
+    </header>
   );
 };
 

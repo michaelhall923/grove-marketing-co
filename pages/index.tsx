@@ -11,6 +11,12 @@ import SpriteOceanRight from "@/components/SpriteOceanRight";
 import SpriteBoat from "@/components/SpriteBoat";
 import SpriteSurfer from "@/components/SpriteSurfer";
 import SpriteSmoke from "@/components/SpriteSmoke";
+import SpriteDolphin from "@/components/SpriteDolphin";
+import SpriteJellyfish from "@/components/SpriteJellyfish";
+import SpriteFish from "@/components/SpriteFish";
+import SpriteSeaFloor from "@/components/SpriteSeaFloor";
+import SpriteConstructionSign from "@/components/SpriteConstructionSign";
+import ScrollShow from "@/components/ScrollShow";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
@@ -69,8 +75,8 @@ export default function Home() {
             <div className="text-9xl leading-24 inline-block">Grove</div>
             <div className="text-4xl">Marketing Co.</div>
           </h1>
-          <h2 className="md:w-lg text-5xl font-copy">
-            Building adventurous brands from the Space Coast
+          <h2 className="md:w-2xl text-5xl font-copy">
+            Building adventurous brands<br/>from the Space Coast
           </h2>
         </div>
 
@@ -127,10 +133,37 @@ export default function Home() {
             <div className="w-screen absolute -top-8 left-1/2 -translate-x-1/2">
               <SpriteWaveBottom />
             </div>
+            <div className="w-80 absolute top-60 left-12">
+              <ScrollShow>
+                <SpriteDolphin />
+              </ScrollShow>
+            </div>
+            <div className="w-36 absolute top-56 right-24">
+              <ScrollShow>
+                <SpriteJellyfish />
+              </ScrollShow>
+            </div>
+            <ScrollShow>
+              <div className="w-20 absolute top-40 left-1/2">
+                <SpriteFish />
+              </div>
+              <div className="w-18 absolute top-48 left-1/2 translate-x-16">
+                <SpriteFish />
+              </div>
+              <div className="w-16 absolute top-56 left-1/2 translate-x-4">
+                <SpriteFish />
+              </div>
+              <div className="w-14 absolute top-50 left-1/2 -translate-x-8">
+                <SpriteFish />
+              </div>
+              <div className="w-12 absolute top-36 left-1/2 translate-x-18">
+                <SpriteFish />
+              </div>
+            </ScrollShow>
 
-            <div className="absolute top-76 w-full lg:w-3xl left-1/2 -translate-x-1/2 rounded-4xl p-2" style={{backgroundColor: "#6EA39E"}}>
-              <div className="rounded-3xl p-2" style={{backgroundColor: "#4F8D8C"}}>
-                <div className="rounded-2xl p-2" style={{backgroundColor: "#255C67"}}>
+            <div className="absolute top-88 w-full lg:w-3xl left-1/2 -translate-x-1/2 rounded-4xl p-2" style={{backgroundColor: "#4F8D8C"}}>
+              <div className="rounded-3xl p-2" style={{backgroundColor: "#255C67"}}>
+                <div className="rounded-2xl p-2" style={{backgroundColor: "rgb(4,72,80)"}}>
                   <div className="relative">
                     <div className="absolute w-full h-full pointer-events-none">
                       <div className="absolute top-0 left-0 rounded-full inline-block" style={{backgroundColor: "#255C67", padding: "2px"}}>
@@ -223,6 +256,27 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-150" style={{background: "linear-gradient(to bottom, rgb(8, 90, 98), rgb(20, 52, 52))"}}>
+          <div className="relative h-full">
+            <div className="w-screen absolute bottom-0 left-1/2 -translate-x-1/2">
+              <SpriteSeaFloor />
+            </div>
+            <div className="w-150 absolute bottom-20 left-1/2 -translate-x-1/2">
+              <SpriteConstructionSign />
+              <div className="absolute top-12 w-full px-16 py-12 text-center" style={{rotate: "1.5deg"}}>
+                <h2 className="text-5xl mb-4">Site Under Construction</h2>
+                <p className="text-2xl mb-8">We're still polishing shells and patching up coral –<br/>More info coming soon!</p>
+                <p className="text-3xl">
+                  <Link href="tel:3177775858">(317) 777-5858</Link>
+                </p>
+                <p className="text-3xl">
+                  <Link href="mailto:sales@grovemarketingco.com">sales@grovemarketingco.com</Link>
+                </p>
               </div>
             </div>
           </div>
