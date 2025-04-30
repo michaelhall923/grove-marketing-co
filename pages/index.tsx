@@ -270,7 +270,7 @@ export default function Home() {
               <SpriteConstructionSign />
               <div className="absolute top-12 w-full px-16 py-12 text-center" style={{rotate: "1.5deg"}}>
                 <h2 className="text-5xl mb-4">Site Under Construction</h2>
-                <p className="text-2xl mb-8">We&apos;re still polishing shells and patching up coral –<br/>More info coming soon!</p>
+                <p className="text-3xl mb-8 font-copy">We&apos;re still polishing shells and patching up coral, more info coming soon!</p>
                 <p className="text-3xl">
                   <Link href="tel:3177775858">(317) 777-5858</Link>
                 </p>
