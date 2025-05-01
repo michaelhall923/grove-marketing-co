@@ -102,7 +102,7 @@ export default function Home() {
               <SpriteOceanTop />
             </div>
             <div className="absolute top-0 bottom-0 w-screen overflow-x-hidden">
-              <div className="w-76 md:w-120 lg:w-192 absolute top-22 md:top-44 lg:top-64 left-0 lg:right-full -translate-x-20 lg:translate-x-172">
+              <div className="w-76 md:w-120 lg:w-192 absolute top-22 md:top-44 lg:top-64 left-0 lg:right-full -translate-x-20 lg:-translate-x-20">
                 <SpriteOceanLeft />
               </div>
               <div className="w-76 md:w-110 lg:w-156 absolute top-48 md:top-66 lg:top-88 right-0 lg:left-full translate-x-32 lg:-translate-x-128">
@@ -284,7 +284,7 @@ export default function Home() {
             </div>
             <div className="w-4/5 lg:w-150 absolute bottom-0 md:bottom-20 left-1/2 -translate-x-1/2">
               <SpriteConstructionSign />
-              <div className="absolute top-0 md:top-12 w-full px-5 md:px-16 py-6 md:py-12 text-center" style={{rotate: "1.5deg"}}>
+              <div className="absolute flex flex-col justify-center h-5/6 top-0  w-full px-5 md:px-16 py-6 md:py-12 text-center" style={{rotate: "1.5deg"}}>
                 <h2 className="text-2xl md:text-5xl md:mb-4">Site Under Construction</h2>
                 <p className="text-md md:text-3xl mb-4 md:mb-8 font-copy">We&apos;re still polishing shells and patching up coral – more info coming soon!</p>
                 <p className="text-xl md:text-3xl">
