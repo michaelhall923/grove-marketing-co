@@ -72,7 +72,7 @@ export default function Home() {
     <div className="-mt-20 md:mt-0">
       <main className="">
         <div className="md:w-2xl lg:w-4xl mx-auto px-4 lg:px-8 min-h-110 md:min-h-144">
-          <h1 className="uppercase w-3/4 md:w-xs lg:w-xs text-right mb-8">
+          <h1 className="uppercase w-60 md:w-xs lg:w-xs text-right mb-8">
             <div className="text-8xl md:text-9xl leading-18 md:leading-24 inline-block">Grove</div>
             <div className="text-3xl">Marketing Co.</div>
           </h1>
