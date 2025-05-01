@@ -1,6 +1,6 @@
 const SpriteWave = () => {
     return (
-        <svg className="w-full animate-wave" viewBox="0 0 500 30" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-full animate-wave" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
             <path d="
                 M 0 10
                 C 16.7 0, 33.3 20, 50 10
@@ -14,8 +14,8 @@ const SpriteWave = () => {
                 C 416.7 0, 433.3 20, 450 10
                 C 466.7 0, 483.3 20, 500 10
 
-                L 500 30
-                L 0 30
+                L 500 100
+                L 0 100
                 Z
             " fill="#287073" />
         </svg>

@@ -17,9 +17,9 @@ const Header = ({ data }) => {
   if (!pathName) return null;
 
   return (
-    <header className="px-8 py-8 bg-transparent sticky top-0 z-10 flex justify-end items-center">
+    <header className="p-6 lg:p-8 bg-transparent sticky top-0 z-10 flex justify-end items-center">
       <Link href="/">
-        <Image src="/img/logo-tan.png" alt="Home" width={50} height={50} />
+        <Image src="/img/logo-tan.png" alt="Home" width={50} height={62} style={{width: 50, height: 62}} />
       </Link>
       <nav className="flex gap-2 justify-end uppercase text-2xl hidden">
         {data?.navigationLinks?.data?.links.map((link, index) => (
