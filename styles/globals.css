@@ -163,9 +163,9 @@
   --animate-smoke-6: fade-in 0.8s ease-out forwards 1.2s;
   --animate-smoke-7: fade-in 0.8s ease-out forwards 1.6s;
   --animate-smoke-8: fade-in 0.8s ease-out forwards 2.0s;
-  --animate-dolphin: dolphin 2s ease-in-out forwards;
-  --animate-jellyfish: jellyfish 3s ease-in-out forwards;
-  --animate-fish: fish 1.6s ease-out forwards;
+  --animate-dolphin: dolphin 2s ease-in-out forwards, boat-wave 3.2s ease-in-out infinite 2s;
+  --animate-jellyfish: jellyfish 3s ease-in-out forwards, boat-wave 6.4s ease-in-out infinite 3s;
+  --animate-fish: fish 1.6s ease-out forwards, boat-wave 3.2s ease-in-out infinite 1.6s;
 }
 
 @media (prefers-color-scheme: dark) {

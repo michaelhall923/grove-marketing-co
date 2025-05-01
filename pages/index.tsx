@@ -16,6 +16,7 @@ import SpriteJellyfish from "@/components/SpriteJellyfish";
 import SpriteFish from "@/components/SpriteFish";
 import SpriteSeaFloor from "@/components/SpriteSeaFloor";
 import SpriteConstructionSign from "@/components/SpriteConstructionSign";
+import SpriteConstructionOctopus from "@/components/SpriteConstructionOctopus";
 import ScrollShow from "@/components/ScrollShow";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
@@ -294,6 +295,11 @@ export default function Home() {
                   <Link href="mailto:sales@grovemarketingco.com">sales@grovemarketingco.com</Link>
                 </p>
               </div>
+            </div>
+            <div className="absolute w-16 md:w-32 -bottom-8 md:bottom-20 left-4 md:left-12 lg:left-1/4 lg:-translate-x-full">
+              <ScrollShow>
+                <SpriteConstructionOctopus />
+              </ScrollShow>
             </div>
           </div>
         </div>
