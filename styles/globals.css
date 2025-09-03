@@ -5,6 +5,8 @@
   --foreground: #171717;
 }
 
+html { scroll-behavior: smooth; }
+
 @font-face {
   font-family: 'Franklin Gothic Condensed';
   src: url('/fonts/franklin-gothic-condensed.ttf') format('truetype');
@@ -173,4 +175,33 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+:is(
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="password"],
+  input[type="url"],
+  input[type="tel"],
+  textarea
+) {
+  padding: 12px;
+  line-height: 1;
+  border-radius: 8px;
+  border: 2px solid #FBE2B6;
+  line-height: 1;
+}
+
+button {
+  padding: 12px;
+  line-height: 1;
+  border-radius: 8px;
+  background-color: #E27C22;
+  color: #FBE2B6;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FC7108;
 }

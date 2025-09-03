@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 import SpriteSun from "@/components/SpriteSun";
 import SpriteSunRays from "@/components/SpriteSunRays";
 import SpriteRocket from "@/components/SpriteRocket";
@@ -18,10 +19,11 @@ import SpriteSeaFloor from "@/components/SpriteSeaFloor";
 import SpriteConstructionSign from "@/components/SpriteConstructionSign";
 import SpriteConstructionOctopus from "@/components/SpriteConstructionOctopus";
 import ScrollShow from "@/components/ScrollShow";
+import TrustSection from "@/components/TrustSection";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import Form from 'next/form'
 // import { Geist, Geist_Mono } from "next/font/google";
 
 // const geistSans = Geist({
@@ -95,11 +97,11 @@ export default function Home() {
             <div className="w-16 md:w-32 absolute -top-56 md:-top-112 right-9 md:right-18 lg:right-32">
               <SpriteRocket />
             </div>
-            <div className="w-screen absolute -top-6 md:-top-16 lg:-top-16 left-1/2 -translate-x-1/2">
+            <div className="w-screen absolute -top-[4vw] left-1/2 -translate-x-1/2">
               <SpriteWave />
             </div>
             <div className="w-screen absolute top-0 h-100" style={{backgroundColor: "#194b51"}}></div>
-            <div className="w-screen absolute top-0 md:-top-8 lg:-top-4 left-1/2 -translate-x-1/2">
+            <div className="w-screen absolute top-0 left-1/2 -translate-x-1/2">
               <SpriteOceanTop />
             </div>
             <div className="absolute top-0 bottom-0 w-screen overflow-x-hidden">
@@ -120,11 +122,13 @@ export default function Home() {
               <h2 className="w-full px-4 lg:px-32 leading-16 md:leading-22 inline-block text-center uppercase text-6xl md:text-8xl">
                 Start Exploring
               </h2>
-              <div className="relative w-16 md:w-32 h-16 md:h-32 mt-6 mx-auto rounded-full bg-grove-100">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#287073" className="absolute size-10 md:size-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                </svg>
-              </div>
+              <a href="#services">
+                <div className="relative w-16 md:w-32 h-16 md:h-32 mt-6 mx-auto rounded-full bg-grove-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#287073" className="absolute size-10 md:size-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -167,7 +171,7 @@ export default function Home() {
               </div>
             </ScrollShow>
 
-            <div className="absolute top-88 md:top-120 lg:top-100 w-[calc(100%-32px)] md:w-[calc(100%-64px)] lg:w-xl left-1/2 -translate-x-1/2 rounded-4xl p-2" style={{backgroundColor: "#4F8D8C"}}>
+            <div id="services" className="absolute top-88 md:top-120 lg:top-100 w-[calc(100%-32px)] md:w-[calc(100%-64px)] lg:w-xl left-1/2 -translate-x-1/2 rounded-4xl p-2" style={{backgroundColor: "#4F8D8C"}}>
               <div className="rounded-3xl p-2" style={{backgroundColor: "#255C67"}}>
                 <div className="rounded-2xl p-2" style={{backgroundColor: "rgb(4,72,80)"}}>
                   <div className="relative">
@@ -278,7 +282,55 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="h-90 md:h-200" style={{background: "linear-gradient(to bottom, rgb(8, 90, 98), rgb(20, 52, 52))"}}>
+        {/* <div id="trust" className="pt-40 pb-40 px-4 lg:px-32" style={{background: "linear-gradient(to bottom, rgb(8, 90, 98), rgb(20, 52, 52))"}}>
+          <h2 className="w-full leading-16 md:leading-22 inline-block text-center uppercase text-6xl md:text-8xl mb-8">
+            Anchored In Trust
+          </h2>
+          <p className="text-md md:text-3xl mx-auto max-w-212 mb-8 md:mb-20 font-copy text-center">From wild ideas to razor-sharp execution, we partner with brands who aren&apos;t afraid to go deep. Strategy, design, code, launch — whatever it takes to move the needle, we&apos;re in. Here are a few of the names we&apos;ve helped make waves.</p>
+          <div className="mx-auto max-w-196 ">
+            <div className="flex justify-between">
+              <div className="w-1/4 relative">
+                <SpriteJellyfishBig />
+                <div className="absolute left-5/32 right-5/32 top-5/16">
+                  <Image className="-translate-y-1/2" src="/img/brands/hilton.png" alt="Hilton Logo" width="1527" height="569" />
+                </div>
+              </div>
+              <div className="w-1/4 relative">
+                <SpriteJellyfishBig />
+                <div className="absolute left-5/32 right-5/32 top-5/16">
+                  <Image className="-translate-y-1/2" src="/img/brands/ksc.svg" alt="Hilton Logo" width="1527" height="569" />
+                </div>
+              </div>
+            </div>
+
+            <div className="-mt-[20%]">
+              <div className="w-1/4 relative mx-auto">
+                <SpriteJellyfishBig />
+                <div className="absolute left-5/32 right-5/32 top-5/16">
+                  <Image className="-translate-y-1/2" src="/img/brands/patrick.svg" alt="Hilton Logo" width="1527" height="569" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-between mt-[-20%]">
+              <div className="w-1/4 relative">
+                <SpriteJellyfishBig />
+                <div className="absolute left-5/32 right-5/32 top-5/16">
+                  <Image className="-translate-y-1/2" src="/img/brands/seadek.png" alt="Hilton Logo" width="1527" height="569" />
+                </div>
+              </div>
+              <div className="w-1/4 relative">
+                <SpriteJellyfishBig />
+                <div className="absolute left-5/32 right-5/32 top-5/16">
+                  <Image className="-translate-y-1/2" src="/img/brands/ussfhf.webp" alt="Hilton Logo" width="1527" height="569" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        <TrustSection />
+
+        <div className="h-90 md:h-200" style={{background: "linear-gradient(to bottom, rgb(20, 52, 52), rgb(15, 38, 38))"}}>
           <div className="relative h-full">
             <div className="w-screen absolute bottom-0 left-1/2 -translate-x-1/2">
               <SpriteSeaFloor />
@@ -286,14 +338,15 @@ export default function Home() {
             <div className="w-4/5 lg:w-150 absolute bottom-0 md:bottom-20 left-1/2 -translate-x-1/2">
               <SpriteConstructionSign />
               <div className="absolute flex flex-col justify-center h-5/6 top-0  w-full px-5 md:px-16 py-6 md:py-12 text-center" style={{rotate: "1.5deg"}}>
-                <h2 className="text-2xl md:text-5xl md:mb-4">Site Under Construction</h2>
+                {/* <h2 className="text-2xl md:text-5xl md:mb-4">Site Under Construction</h2>
                 <p className="text-md md:text-3xl mb-4 md:mb-8 font-copy">We&apos;re still polishing shells and patching up coral – more info coming soon!</p>
                 <p className="text-xl md:text-3xl">
                   <Link href="tel:3177775858">(317) 777-5858</Link>
                 </p>
                 <p className="text-xl md:text-3xl">
                   <Link href="mailto:sales@grovemarketingco.com">sales@grovemarketingco.com</Link>
-                </p>
+                </p> */}
+                <ContactForm />
               </div>
             </div>
             <div className="absolute w-16 md:w-32 -bottom-8 md:bottom-20 left-4 md:left-12 lg:left-1/4 lg:-translate-x-full">
@@ -305,100 +358,8 @@ export default function Home() {
         </div>
 
         <div className="h-20 md:h-40 -mt-px lg:hidden" style={{background: "linear-gradient(#0b1f1e, #050f0f)"}}></div>
-        
-        {/* <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div> */}
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        {/* <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a> */}
-      </footer>
     </div>
   );
 }

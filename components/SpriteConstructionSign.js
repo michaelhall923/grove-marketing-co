@@ -1,7 +1,7 @@
 
 const SpriteConstructionSign = () => {
     return (
-        <svg className="w-full" viewBox="0 0 723.1 609.35" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-full invisible md:visible" viewBox="0 0 723.1 609.35" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <style>
                 {`.sprite-construction-sign-1 {
