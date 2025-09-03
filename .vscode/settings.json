@@ -1,0 +1,18 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Only run Prettier if a config exists in the workspace
+  "prettier.requireConfig": true,
+  // Always use the project’s Prettier, not a global one
+  "prettier.prettierPath": "./node_modules/prettier",
+
+  // Also fix ESLint issues on save (imports, etc.)
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // Nice to have for Tailwind users
+  "files.associations": { "*.css": "tailwindcss" }
+}

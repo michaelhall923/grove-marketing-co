@@ -193,15 +193,21 @@ html { scroll-behavior: smooth; }
   line-height: 1;
 }
 
-button {
-  padding: 12px;
-  line-height: 1;
-  border-radius: 8px;
-  background-color: #E27C22;
-  color: #FBE2B6;
-  cursor: pointer;
+p, ul, ol {
+  font-family: var(--font-copy);
 }
 
-button:hover {
-  background-color: #FC7108;
+@layer components {
+  button {
+    padding: 12px;
+    line-height: 1;
+    border-radius: 8px;
+    background-color: #E27C22;
+    color: #FBE2B6;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #FC7108;
+  }
 }
