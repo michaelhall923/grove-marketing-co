@@ -23,7 +23,6 @@ import TrustSection from "@/components/TrustSection";
 import {  builder } from "@builder.io/react";
 import { GetStaticProps } from "next";
 import Image from "next/image";
-import Form from 'next/form'
 // import { Geist, Geist_Mono } from "next/font/google";
 
 // const geistSans = Geist({

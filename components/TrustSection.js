@@ -1,7 +1,6 @@
 // components/TrustSection.jsx
 import Image from "next/image";
 import SpriteJellyfishBig from "@/components/SpriteJellyfishBig";
-import ScrollShow from "@/components/ScrollShow";
 
 // Add/remove brand entries here
 const BRANDS = [
