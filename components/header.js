@@ -15,6 +15,7 @@ const navigationLinks = [
     label: 'Services',
     links: [
       { url: '/services/web-development', label: 'Web Development' },
+      { url: '/services/integration-automation', label: 'Integration & Automation' },
       { url: '/services/content-creation', label: 'Content Creation' },
       // add more sublinks here as needed
     ],
@@ -31,8 +32,8 @@ export default function Header() {
   if (!pathName) return null;
 
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between bg-transparent p-6 lg:p-8">
-      <Link href="/" className="ml-2">
+    <header className="sticky top-0 z-10 flex items-center justify-between bg-transparent p-6 px-4 lg:p-8">
+      <Link href="/" className="md:pl-4">
         <Image
           src="/img/logo-tan.png"
           alt="Home"
