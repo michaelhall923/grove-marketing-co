@@ -17,6 +17,7 @@ const navigationLinks = [
       { url: '/services/web-development', label: 'Web Development' },
       { url: '/services/integration-automation', label: 'Integration & Automation' },
       { url: '/services/content-creation', label: 'Content Creation' },
+      { url: '/services/advertising-seo', label: 'Advertising & SEO' },
       // add more sublinks here as needed
     ],
   },

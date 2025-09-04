@@ -272,24 +272,24 @@ export default function Home() {
                           </div>
                         </Link>
 
-                        {/* <Link href=""> */}
-                        <div>
-                          <div
-                            className="mx-auto mb-4 size-28 overflow-hidden rounded-full border-4 md:size-44 md:border-6"
-                            style={{ borderColor: '#6EA39E' }}
-                          >
-                            <Image
-                              className="scale-110"
-                              src="/img/icon-integration-automation.svg"
-                              alt="Integration & Automation"
-                              width={500}
-                              height={500}
-                              priority
-                            />
+                        <Link href="/services/integration-automation">
+                          <div>
+                            <div
+                              className="mx-auto mb-4 size-28 overflow-hidden rounded-full border-4 md:size-44 md:border-6"
+                              style={{ borderColor: '#6EA39E' }}
+                            >
+                              <Image
+                                className="scale-110"
+                                src="/img/icon-integration-automation.svg"
+                                alt="Integration & Automation"
+                                width={500}
+                                height={500}
+                                priority
+                              />
+                            </div>
+                            <h3 className="text-center">Integration & Automation</h3>
                           </div>
-                          <h3 className="text-center">Integration & Automation</h3>
-                        </div>
-                        {/* </Link> */}
+                        </Link>
 
                         <Link href="/services/content-creation">
                           <div>
@@ -310,24 +310,24 @@ export default function Home() {
                           </div>
                         </Link>
 
-                        {/* <Link href=""> */}
-                        <div>
-                          <div
-                            className="mx-auto mb-4 size-28 overflow-hidden rounded-full border-4 md:size-44 md:border-6"
-                            style={{ borderColor: '#6EA39E' }}
-                          >
-                            <Image
-                              className="scale-110"
-                              src="/img/icon-advertising-seo.svg"
-                              alt="Advertising & SEO"
-                              width={500}
-                              height={500}
-                              priority
-                            />
+                        <Link href="/services/advertising-seo">
+                          <div>
+                            <div
+                              className="mx-auto mb-4 size-28 overflow-hidden rounded-full border-4 md:size-44 md:border-6"
+                              style={{ borderColor: '#6EA39E' }}
+                            >
+                              <Image
+                                className="scale-110"
+                                src="/img/icon-advertising-seo.svg"
+                                alt="Advertising & SEO"
+                                width={500}
+                                height={500}
+                                priority
+                              />
+                            </div>
+                            <h3 className="text-center">Advertising & SEO</h3>
                           </div>
-                          <h3 className="text-center">Advertising & SEO</h3>
-                        </div>
-                        {/* </Link> */}
+                        </Link>
                       </div>
                     </div>
                   </div>
