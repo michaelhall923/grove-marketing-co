@@ -15,6 +15,7 @@ const navigationLinks = [
     label: 'Services',
     links: [
       { url: '/services/web-development', label: 'Web Development' },
+      { url: '/services/content-creation', label: 'Content Creation' },
       // add more sublinks here as needed
     ],
   },
