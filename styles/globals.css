@@ -1,11 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: 'Franklin Gothic Condensed';
@@ -17,7 +19,7 @@ html { scroll-behavior: smooth; }
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-grove-50:  #fff9ec;
+  --color-grove-50: #fff9ec;
   --color-grove-100: #fbe2b6; /* new anchor */
   --color-grove-200: #ffd79a;
   --color-grove-300: #ffc36c;
@@ -29,9 +31,9 @@ html { scroll-behavior: smooth; }
   --color-grove-900: #6a340c;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-header: "Franklin Gothic Condensed", sans-serif;
-  --font-copy: "Georgia", serif;
-  
+  --font-header: 'Franklin Gothic Condensed', sans-serif;
+  --font-copy: 'Georgia', serif;
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -75,13 +77,13 @@ html { scroll-behavior: smooth; }
   }
 
   @keyframes wave {
-    0% { 
+    0% {
       transform: translateY(0);
     }
-    50% { 
+    50% {
       transform: translateY(-2vw);
     }
-    100% { 
+    100% {
       transform: translateY(0);
     }
   }
@@ -96,13 +98,13 @@ html { scroll-behavior: smooth; }
     }
   }
   @keyframes boat-wave {
-    0% { 
+    0% {
       transform: translateY(0);
     }
-    50% { 
+    50% {
       transform: translateY(-8%);
     }
-    100% { 
+    100% {
       transform: translateY(0);
     }
   }
@@ -164,7 +166,7 @@ html { scroll-behavior: smooth; }
   --animate-smoke-5: fade-in 0.8s ease-out forwards 1.2s;
   --animate-smoke-6: fade-in 0.8s ease-out forwards 1.2s;
   --animate-smoke-7: fade-in 0.8s ease-out forwards 1.6s;
-  --animate-smoke-8: fade-in 0.8s ease-out forwards 2.0s;
+  --animate-smoke-8: fade-in 0.8s ease-out forwards 2s;
   --animate-dolphin: dolphin 2s ease-in-out forwards, boat-wave 3.2s ease-in-out infinite 2s;
   --animate-jellyfish: jellyfish 3s ease-in-out forwards, boat-wave 6.4s ease-in-out infinite 3s;
   --animate-fish: fish 1.6s ease-out forwards, boat-wave 3.2s ease-in-out infinite 1.6s;
@@ -178,36 +180,46 @@ html { scroll-behavior: smooth; }
 }
 
 :is(
-  input[type="text"],
-  input[type="search"],
-  input[type="email"],
-  input[type="password"],
-  input[type="url"],
-  input[type="tel"],
+  input[type='text'],
+  input[type='search'],
+  input[type='email'],
+  input[type='password'],
+  input[type='url'],
+  input[type='tel'],
   textarea
 ) {
   padding: 12px;
   line-height: 1;
   border-radius: 8px;
-  border: 2px solid #FBE2B6;
+  border: 2px solid #fbe2b6;
   line-height: 1;
 }
 
-p, ul, ol {
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+p,
+ul,
+ol {
   font-family: var(--font-copy);
 }
 
 @layer components {
-  button {
+  button,
+  .button {
     padding: 12px;
     line-height: 1;
     border-radius: 8px;
-    background-color: #E27C22;
-    color: #FBE2B6;
+    background-color: #e27c22;
+    color: #fbe2b6;
     cursor: pointer;
+    text-transform: uppercase;
   }
 
-  button:hover {
-    background-color: #FC7108;
+  button:hover,
+  .button:hover {
+    background-color: #fc7108;
   }
 }

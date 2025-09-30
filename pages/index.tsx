@@ -82,11 +82,11 @@ export default function Home() {
             <div className="inline-block text-8xl leading-18 md:text-9xl md:leading-24">Grove</div>
             <div className="text-3xl">Marketing Co.</div>
           </h1>
-          <h2 className="font-copy text-2xl md:w-2xl md:text-4xl lg:text-5xl">
+          <p className="font-copy text-2xl md:w-2xl md:text-4xl lg:text-5xl">
             Building adventurous brands
             <br />
             from the Space Coast
-          </h2>
+          </p>
         </div>
 
         <div style={{ backgroundColor: '#194b51' }} className="">

@@ -4,7 +4,7 @@ import SpriteConstructionOctopus from './SpriteConstructionOctopus';
 import SpriteConstructionSign from './SpriteConstructionSign';
 import SpriteSeaFloor from './SpriteSeaFloor';
 
-const Footer = () => {
+const Footer = ({ title }) => {
   const year = new Date().getFullYear();
 
   return (
@@ -31,7 +31,7 @@ const Footer = () => {
                     <p className="text-xl md:text-3xl">
                       <Link href="mailto:sales@grovemarketingco.com">sales@grovemarketingco.com</Link>
                     </p> */}
-              <ContactForm />
+              <ContactForm title={title} />
             </div>
           </div>
           <div className="absolute -bottom-8 left-4 w-16 md:bottom-20 md:left-12 md:w-32 lg:left-1/4 lg:-translate-x-full">

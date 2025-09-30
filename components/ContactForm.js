@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function ContactForm() {
+export default function ContactForm({ title }) {
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [formErrors, setFormErrors] = useState([]); // array of strings
   const [fieldErrors, setFieldErrors] = useState({}); // { first_name?: string, ... }
@@ -88,7 +88,7 @@ export default function ContactForm() {
       aria-busy={disabled}
       noValidate
     >
-      <h3 className="absolute -top-22 right-0 left-0 text-2xl md:-top-32">Feeling jelly yet?</h3>
+      <h3 className="absolute -top-22 right-0 left-0 text-2xl md:-top-32">{title}</h3>
       <h2 className="absolute -top-14 -right-10 -left-10 text-5xl md:-top-24 md:text-6xl">
         CAST US A LINE!
       </h2>

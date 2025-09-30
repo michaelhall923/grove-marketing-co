@@ -29,8 +29,24 @@ const mainPortfolioItems = [
     imageUrl:
       'https://cdn.builder.io/api/v1/image/assets%2F04a66a34a825475f879a3a1be1673b31%2Fc0efd9f6088f4c1c984b6bfce4ffc785',
   },
+  {
+    title: 'Peaklign Partners',
+    url: 'https://peaklignpartners.com/',
+    imageUrl:
+      'https://cdn.builder.io/api/v1/image/assets%2F04a66a34a825475f879a3a1be1673b31%2Fbb776c6d37c8404faf1c4eb6f3e7f42a',
+  },
+  {
+    title: 'Footprint by Lalonde',
+    url: 'https://bookfootprint.com/',
+    imageUrl:
+      'https://cdn.builder.io/api/v1/image/assets%2F04a66a34a825475f879a3a1be1673b31%2F0df67398e46343a89598e84a4bcacccc',
+  },
 ];
 const otherPortfolioItems = [
+  {
+    title: 'Tap Root Fields Cannabis',
+    url: 'https://www.taprootfieldscannabis.com/',
+  },
   {
     title: 'Gold Tone Music Group',
     url: 'https://goldtonemusicgroup.com/goldtone/',
@@ -54,10 +70,6 @@ const otherPortfolioItems = [
   {
     title: 'Great Lakes Castaway',
     url: 'https://greatlakescastaway.com/',
-  },
-  {
-    title: 'Footprint by Lalonde',
-    url: 'https://bookfootprint.com/',
   },
 ];
 
