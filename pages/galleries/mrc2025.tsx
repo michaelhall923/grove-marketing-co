@@ -5,20 +5,23 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const MRC2025: NextPage & { footerTitle?: string } = () => {
+  const title =
+    'Photo Gallery - Melbourne Regional Chamber 2025 Community Leadership Retreat | Grove Marketing Co.';
+  const description =
+    "Photo gallery for the Melbourne Regional Chamber's 2025 Community Leadership Retreat";
+
   return (
     <div
       className="min-h-[100vh]"
       style={{ background: `linear-gradient(to bottom, #297073, rgb(20, 52, 52))` }}
     >
       <Head>
-        <title>
-          Photo Gallery - Melbourne Regional Chamber 2025 Community Leadership Retreat | Grove
-          Marketing Co.
-        </title>
-        <meta
-          name="description"
-          content="Photo gallery for the Melbourne Regional Chamber's 2025 Community Leadership Retreat"
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
       </Head>
@@ -56,6 +59,6 @@ const MRC2025: NextPage & { footerTitle?: string } = () => {
   );
 };
 
-MRC2025.footerTitle = 'Looking for full resolution photos?';
+MRC2025.footerTitle = 'Want full resolution photos?';
 
 export default MRC2025;
