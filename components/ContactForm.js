@@ -1,5 +1,6 @@
 'use client';
 
+import Script from 'next/script';
 import { useState } from 'react';
 
 export default function ContactForm({ title }) {
@@ -7,6 +8,8 @@ export default function ContactForm({ title }) {
   const [formErrors, setFormErrors] = useState([]); // array of strings
   const [fieldErrors, setFieldErrors] = useState({}); // { first_name?: string, ... }
   const [errorMessage, setErrorMessage] = useState(''); // network/unknown
+
+  const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   function resetErrors() {
     setFormErrors([]);
@@ -32,6 +35,29 @@ export default function ContactForm({ title }) {
     setFormErrors(top);
   }
 
+  async function getRecaptchaToken(action) {
+    if (!SITE_KEY) throw new Error('Missing reCAPTCHA site key');
+    // wait until grecaptcha is ready
+    await new Promise((resolve) => {
+      if (typeof window !== 'undefined' && window.grecaptcha && window.grecaptcha.ready) {
+        window.grecaptcha.ready(resolve);
+      } else {
+        // poll briefly if script is still loading
+        const start = Date.now();
+        const timer = setInterval(() => {
+          if (window.grecaptcha && window.grecaptcha.ready) {
+            clearInterval(timer);
+            window.grecaptcha.ready(resolve);
+          } else if (Date.now() - start > 5000) {
+            clearInterval(timer);
+            resolve(); // proceed; execute will throw if not loaded
+          }
+        }, 50);
+      }
+    });
+    return await window.grecaptcha.execute(SITE_KEY, { action });
+  }
+
   async function onSubmit(e) {
     e.preventDefault();
     setStatus('loading');
@@ -49,11 +75,25 @@ export default function ContactForm({ title }) {
       notes: fd.get('notes')?.toString().trim() || '',
     };
 
+    // reCAPTCHA v3
+    const recaptchaAction = 'contact';
+    let recaptchaToken = '';
+    try {
+      recaptchaToken = await getRecaptchaToken(recaptchaAction);
+      if (!recaptchaToken) throw new Error('Failed to get reCAPTCHA token');
+    } catch (err) {
+      setStatus('error');
+      setErrorMessage(
+        err instanceof Error ? err.message : 'reCAPTCHA failed. Please refresh and try again.',
+      );
+      return;
+    }
+
     try {
       const resp = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, recaptchaToken, recaptchaAction }),
       });
 
       const data = await resp.json().catch(() => ({}));
@@ -89,6 +129,14 @@ export default function ContactForm({ title }) {
       aria-busy={disabled}
       noValidate
     >
+      {/* load reCAPTCHA v3 */}
+      {SITE_KEY && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
+          strategy="afterInteractive"
+        />
+      )}
+
       <h3 className="absolute -top-22 right-0 left-0 text-2xl md:-top-32">{title}</h3>
       <h2 className="absolute -top-14 -right-10 -left-10 text-5xl md:-top-24 md:text-6xl">
         CAST US A LINE!
