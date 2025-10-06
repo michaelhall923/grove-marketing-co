@@ -83,6 +83,7 @@ export default function ContactForm({ title }) {
 
   return (
     <form
+      id="contactForm"
       onSubmit={onSubmit}
       className="relative w-full rounded-xl bg-[#343229] p-4 shadow-[4px_0_0_#0B1F1E,_-4px_0_0_#0B1F1E,_0_4px_0_#0B1F1E] md:bg-transparent md:p-0 md:shadow-none"
       aria-busy={disabled}

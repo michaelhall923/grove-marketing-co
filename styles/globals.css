@@ -196,7 +196,8 @@ html {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-transform: uppercase;
 }
 
@@ -206,6 +207,37 @@ ol {
   font-family: var(--font-copy);
 }
 
+.article ul li {
+  list-style: disc;
+  margin-bottom: 0.5em;
+  margin-left: 14px;
+}
+
+.article .box {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: var(--color-grove-100);
+}
+
+.article a[role='button'].builder-block {
+  padding: 12px;
+  line-height: 1;
+  border-radius: 8px;
+  background-color: #e27c22;
+  color: var(--color-grove-100);
+  cursor: pointer;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.article a[role='button'].builder-block:hover {
+  background-color: #fc7108;
+}
+
+#contactForm {
+  scroll-margin-top: 240px;
+}
+
 @layer components {
   button,
   .button {
@@ -213,7 +245,7 @@ ol {
     line-height: 1;
     border-radius: 8px;
     background-color: #e27c22;
-    color: #fbe2b6;
+    color: var(--color-grove-100);
     cursor: pointer;
     text-transform: uppercase;
   }
