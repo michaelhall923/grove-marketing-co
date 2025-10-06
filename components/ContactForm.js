@@ -131,10 +131,18 @@ export default function ContactForm({ title }) {
     >
       {/* load reCAPTCHA v3 */}
       {SITE_KEY && (
-        <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
-          strategy="afterInteractive"
-        />
+        <>
+          <Script
+            src={`https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`}
+            strategy="afterInteractive"
+          />
+          {/* Hide the floating badge site-wide while showing the textual attribution below */}
+          <style jsx global>{`
+            .grecaptcha-badge {
+              visibility: hidden;
+            }
+          `}</style>
+        </>
       )}
 
       <h3 className="absolute -top-22 right-0 left-0 text-2xl md:-top-32">{title}</h3>
@@ -278,6 +286,31 @@ export default function ContactForm({ title }) {
       <button className="mt-2 w-full" type="submit" disabled={disabled}>
         {status === 'loading' ? 'Sending...' : 'Submit'}
       </button>
+
+      {/* Required attribution when hiding the badge (kept tiny & low-contrast, but visible) */}
+      {SITE_KEY && (
+        <p className="mt-1 text-[10px] leading-tight text-[#C9C4B5] opacity-60">
+          This site is protected by reCAPTCHA and the Google{' '}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2"
+          >
+            Privacy Policy
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://policies.google.com/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2"
+          >
+            Terms of Service
+          </a>{' '}
+          apply.
+        </p>
+      )}
     </form>
   );
 }

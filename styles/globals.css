@@ -207,6 +207,10 @@ ol {
   font-family: var(--font-copy);
 }
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 .article ul li {
   list-style: disc;
   margin-bottom: 0.5em;
