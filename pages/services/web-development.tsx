@@ -47,10 +47,10 @@ const otherPortfolioItems = [
     title: 'Tap Root Fields Cannabis',
     url: 'https://www.taprootfieldscannabis.com/',
   },
-  {
-    title: 'Gold Tone Music Group',
-    url: 'https://goldtonemusicgroup.com/goldtone/',
-  },
+  // {
+  //   title: 'Gold Tone Music Group',
+  //   url: 'https://goldtonemusicgroup.com/goldtone/',
+  // },
   {
     title: 'Everglades Ranch',
     url: 'https://evergladesranch.com/',
