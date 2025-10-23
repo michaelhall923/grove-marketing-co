@@ -81,9 +81,9 @@ export default function ArticlePage({ article }) {
                       src={data.image}
                       width={1920}
                       height={5000}
-                      className="mb-4 rounded-xl"
+                      className="mb-8 rounded-xl"
                     />
-                    <h1 className="text-4xl sm:text-5xl">{title}</h1>
+                    <h1 className="text-4xl sm:text-6xl">{title}</h1>
                     <BuilderComponent
                       model="article"
                       content={fullContent}

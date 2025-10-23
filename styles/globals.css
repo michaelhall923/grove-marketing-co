@@ -211,10 +211,38 @@ ol {
   visibility: hidden;
 }
 
+.article p {
+  @apply mb-2;
+  line-height: 1.2;
+}
+
+.article a {
+  @apply underline;
+}
+
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  @apply mt-4 mb-1;
+}
+
+.article h1 {
+  @apply mb-4;
+}
+
+.article h2 {
+  @apply text-2xl;
+}
+
+.article ul {
+  @apply mt-2 mb-4;
+}
+
 .article ul li {
-  list-style: disc;
-  margin-bottom: 0.5em;
-  margin-left: 14px;
+  @apply ml-[14px] list-disc;
 }
 
 .article .box {
@@ -224,6 +252,7 @@ ol {
 }
 
 .article a[role='button'].builder-block {
+  text-decoration: none;
   padding: 12px;
   line-height: 1;
   border-radius: 8px;
