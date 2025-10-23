@@ -50,7 +50,7 @@ export default function ArticlePage({ article }) {
                 );
               }
 
-              const title = data?.title || '';
+              const title = (data?.title || '') + ' | Grove Marketing Co.';
               const description = data?.excerpt || '';
               const ogImage = getOgImage(data?.image);
 
