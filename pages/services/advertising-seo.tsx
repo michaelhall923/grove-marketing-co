@@ -13,6 +13,7 @@ export default function AdvertisingSEO() {
       <Head>
         <title>Advertising &amp; SEO | Grove Marketing Co.</title>
         <meta
+          key="description"
           name="description"
           content="PPC-first Advertising & SEO: search, shopping, and social ads with clear tracking and simple, useful reporting."
         />

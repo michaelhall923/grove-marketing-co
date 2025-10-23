@@ -13,6 +13,7 @@ export default function IntegrationAutomation() {
       <Head>
         <title>Integration &amp; Automation | Grove Marketing Co.</title>
         <meta
+          key="description"
           name="description"
           content="Basic overview of Grove Marketing Co.'s integration & automation services—connect your tools and automate routine work."
         />

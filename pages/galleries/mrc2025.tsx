@@ -17,13 +17,13 @@ const MRC2025: NextPage & { footerTitle?: string } = () => {
     >
       <Head>
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta key="description" name="description" content={description} />
 
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta key="og:title" property="og:title" content={title} />
+        <meta key="og:title" property="og:description" content={description} />
 
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
+        <meta key="robots" name="robots" content="noindex, nofollow" />
+        <meta key="googlebot" name="googlebot" content="noindex, nofollow" />
       </Head>
       <HeaderFix />
       <Container>

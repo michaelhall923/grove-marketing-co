@@ -36,7 +36,7 @@ export default function ArticlePage({ article }) {
     return (
       <>
         <Head>
-          <meta name="robots" content="noindex" />
+          <meta key="robots" name="robots" content="noindex" />
           <title>Not Found</title>
         </Head>
         <div
@@ -66,7 +66,7 @@ export default function ArticlePage({ article }) {
     >
       <Head>
         <title>{title ? `${title} | Grove Marketing Co.` : 'Article | Grove Marketing Co.'}</title>
-        <meta name="description" content={description} />
+        <meta key="description" name="description" content={description} />
 
         {/* Open Graph */}
         <meta key="og:type" property="og:type" content="article" />
